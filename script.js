@@ -3,6 +3,8 @@ const letter = document.getElementById("letter");
 const capital = document.getElementById("capital");
 const number = document.getElementById("number");
 const length = document.getElementById("length");
+const length2 = document.getElementById("length2");
+
 
 myInput.onfocus = function(){
     document.getElementById("message").style.display = "block";
@@ -24,11 +26,11 @@ myInput.onkeyup = function(){
 
     const upperCaseLetters = /[A-Z]/g;
     if (myInput.value.match(upperCaseLetters)){
-        letter.classList.remove("invalid");
-        letter.classList.add("valid");
+        capital.classList.remove("invalid");
+        capital.classList.add("valid");
     }else{
-        letter.classList.remove("valid");
-        letter.classList.add("invalid");
+        capital.classList.remove("valid");
+        capital.classList.add("invalid");
     }
 
     const  numbers = /[0-9]/g;
@@ -47,6 +49,16 @@ myInput.onkeyup = function(){
         length.classList.remove("valid");
         length.classList.add("invalid")
     }
+
+
+    if(myInput.value.length <= 20){
+        length2.classList.remove("invalid");
+        length2.classList.add("valid");
+    }else{
+        length2.classList.remove("valid");
+        length2.classList.add("invalid")
+    }
+
 
 
 
