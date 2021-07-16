@@ -1,56 +1,71 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-input{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius:4px;
-    margin-top: 6px;
-    margin-bottom:16px;
-    box-sizing: border-box;
+body {
+  background-repeat: no-repeat;
+  background-repeat: repeat-y;
+  background: #659999; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f4791f,
+    #659999
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f4791f,
+    #659999
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
 }
 
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+}
+.container {
+  background-color: #f1f1f1;
+  padding: 40px;
+  width: 50%;
+  margin-left: 350px;
+  margin-top: 100px;
+}
+#message {
+  display: none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 40px;
+  margin-top: 10px;
+  width: 50%;
+  margin-left: 350px;
+}
+#message p {
+  padding: 10px 35px;
+  font-size: 1.2rem;
+}
+.valid {
+  color: green;
+}
+.valid::before {
+  position: relative;
+  left: -15px;
+  content: "✅";
+}
 
-input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-  }
-    .container{
-        background-color: #f1f1f1;
-        padding:20px;
-
-    }
-    #message{
-        display:none;
-        background: #f1f1f1;
-        color: #000;
-        position: relative;
-        padding:20px;
-        margin-top: 10px;
-    }
-    #message p{
-        padding:10px 35px;
-        font-size:1.2rem;
-
-    }
-    .valid{
-        color:green;
-
-    }
-    .valid::before{
-        position: relative;
-        left: -15px;
-        content: "✅";
-    }
-
-    .invalid{
-        color: red;
-        
-    }
-    .invalid::before{
-        position: relative;
-        left: -15px;
-        content:"❌";
-    }
+.invalid {
+  color: red;
+}
+.invalid::before {
+  position: relative;
+  left: -15px;
+  content: "❌";
+}
