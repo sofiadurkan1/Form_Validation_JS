@@ -22,6 +22,39 @@ myInput.onkeyup = function(){
         letter.classList.add("invalid");
     }
 
+    const upperCaseLetters = /[A-Z]/g;
+    if (myInput.value.match(upperCaseLetters)){
+        letter.classList.remove("invalid");
+        letter.classList.add("valid");
+    }else{
+        letter.classList.remove("valid");
+        letter.classList.add("invalid");
+    }
+
+    const  numbers = /[0-9]/g;
+    if(myInput.value.match(numbers)) {
+      number.classList.remove("invalid");
+      number.classList.add("valid");
+    } else {
+      number.classList.remove("valid");
+      number.classList.add("invalid");
+    }
+
+    if(myInput.value.length >= 8){
+        length.classList.remove("invalid");
+        length.classList.add("valid");
+    }else{
+        length.classList.remove("valid");
+        length.classList.add("invalid")
+    }
+
+
+
+
+
+
+
+
 }
 
 
